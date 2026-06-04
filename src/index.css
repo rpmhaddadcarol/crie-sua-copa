@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-title: "Bebas Neue", sans-serif;
+  
+  --color-brand-green: #006633;
+  --color-brand-yellow: #FFD700;
+  --color-bg-dark: #0a1a0f;
+}
+
+/* Custom Base styles */
+body {
+  background: linear-gradient(135deg, #0a1a0f 0%, #0d2818 50%, #1a3a0a 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: "Nunito", system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Glassmorphism custom helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-heavy {
+  background: rgba(13, 40, 24, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.glass-panel-green {
+  background: rgba(0, 102, 51, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 102, 51, 0.3);
+}
+
+.glass-panel-yellow {
+  background: rgba(255, 215, 0, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+/* Glow effects and hover styles */
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-glow:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 102, 51, 0.4), 0 8px 10px -6px rgba(255, 215, 0, 0.2);
+}
+
+/* Custom animations */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(50px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-bubble-1 {
+  animation: floatUp 15s linear infinite;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.animate-bubble-2 {
+  animation: floatUp 25s linear infinite;
+  left: 25%;
+  animation-delay: 3s;
+}
+
+.animate-bubble-3 {
+  animation: floatUp 18s linear infinite;
+  left: 45%;
+  animation-delay: 1s;
+}
+
+.animate-bubble-4 {
+  animation: floatUp 22s linear infinite;
+  left: 70%;
+  animation-delay: 5s;
+}
+
+.animate-bubble-5 {
+  animation: floatUp 16s linear infinite;
+  left: 85%;
+  animation-delay: 2s;
+}
+
+/* Fade-in + Slide-up entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 26, 15, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 51, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.6);
+}

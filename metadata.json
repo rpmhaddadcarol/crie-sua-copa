@@ -1,0 +1,6 @@
+{
+  "name": "Crie sua Copa",
+  "description": "Marketplace moderno com glassmorphism para compra, venda e troca de figurinhas da Copa do Mundo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
